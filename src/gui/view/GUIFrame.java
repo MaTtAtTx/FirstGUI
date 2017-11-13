@@ -22,7 +22,6 @@ public class GUIFrame extends JFrame
 		this.setContentPane(firstPanel);
 		this.setTitle("The Window Title");
 		this.setSize(500, 500);
-		this.setResizable(false);
 		this.setVisible(true);
 	}
 }
