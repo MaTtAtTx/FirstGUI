@@ -5,6 +5,8 @@ import javax.swing.JPanel;
 import javax.swing.JButton;
 import java.awt.Color;
 import javax.swing.SpringLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class GUIPanel extends JPanel
 {
@@ -20,6 +22,8 @@ public class GUIPanel extends JPanel
 		baseLayout = new SpringLayout();
 		
 		setupPanel();
+		setupLayout();
+		setupListeners();
 	}
 	
 	/**
@@ -28,6 +32,7 @@ public class GUIPanel extends JPanel
 	 */
 	private void setupPanel()
 	{
+		this.setBackground(Color.MAGENTA);
 		this.setLayout(baseLayout);
 		this.add(firstButton);
 	}
@@ -37,7 +42,8 @@ public class GUIPanel extends JPanel
 	 */
 	private void setupLayout()
 	{
-		
+		baseLayout.putConstraint(SpringLayout.WEST, firstButton, 164, SpringLayout.WEST, this);
+		baseLayout.putConstraint(SpringLayout.SOUTH, firstButton, -152, SpringLayout.SOUTH, this);
 	}
 	
 	/**
